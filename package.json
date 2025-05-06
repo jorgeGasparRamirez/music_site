@@ -4,7 +4,7 @@
   "description": "Music Site using tailwind",
   "main": "index.js",
   "scripts": {
-    "tw:build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "tw:build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
   },
   "author": "Jorge Gaspar Ramirez Segura",
   "license": "ISC",
