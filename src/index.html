@@ -48,17 +48,33 @@
         carsel.scrollLeft = carsel.scrollLeft - itemWidth;
       });
 
+      document.getElementById("dark-mode-toggle").addEventListener("click",()=>{
+        if(document.body.classList.contains("dark")) {
+          document.body.classList.remove("dark");
+        } else {
+          document.body.classList.add("dark");
+        }
+      });
+
       };
 
     
     </script>
     <title>Music Site</title>
   </head>
-  <body>
-    <main>
-      <header class="text-white">
+  <body class="dark">
+    <main class="bg-zinc-200 dark:bg-zinc-900">
+      <header class="text-zinc-200">
+        <div id="dark-mode-toggle" class="fixed top-24 right-0 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200  dark:text-zinc-900 p-2 text-3xl">
+           <span class="dark:hidden">
+             <i class="fa-solid fa-sun"> </i>  
+           </span>
+           <span class="hidden dark:inline">
+             <i class="fa-solid fa-moon"></i>
+           </span>
+        </div>
         <nav
-          class="flex sticky top-0 bg-gradient-to-r from-rose-500 to-pink-500"
+          class="flex sticky z-10 top-0 bg-gradient-to-r from-rose-500 to-pink-500"
         >
           <div class="flex items-center p-2 gap-2">
             <img src="./assets/images/logo-inverted.png" width="50" />
@@ -209,7 +225,7 @@
           </form>
       </header>
       <!--Headliners-->
-      <div class="contanier mx-auto max-h-screen mt-20">
+      <div class="mx-auto mt-20 max-h-screen text-zinc-900 dark:text-zinc-200">
         <h2>Headliners</h2>
         <p>Experience the sonic delight from these made-up artistis across 7 days that music fans are calling "one of the many gigs that will happen this year"</p>
         <div class="flex">
